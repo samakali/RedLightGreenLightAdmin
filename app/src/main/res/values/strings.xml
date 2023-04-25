@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RedLightGreenLightAdmin</string>
+    <string name="user">user</string>
+    <string name="mint1Bets">mint1Bets</string>
+    <string name="myMint1Bet">myMint1Bet</string>
+    <string name="myMint3Bet">myMint3Bet</string>
+    <string name="mint3Bets">mint3Bets</string>
+    <string name="mint5Bets">mint5Bets</string>
+    <string name="myMint5Bet">myMint5Bet</string>
+    <string name="myDeposit">myDeposit</string>
+    <string name="allDeposit">allDeposit</string>
+    <string name="myWithdraw">myWithdraw</string>
+    <string name="allWithdraw">allWithdraw</string>
+    <string name="parent">parent</string>
+</resources>
