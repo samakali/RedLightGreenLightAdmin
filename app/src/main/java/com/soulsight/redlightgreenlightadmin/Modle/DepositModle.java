@@ -6,14 +6,32 @@ public class DepositModle implements Serializable {
     public DepositModle() {
     }
 
-    private String id,userID,ss,time,status;
+    private String id,userID,ss,time,status,amunt,tid;
 
-    public DepositModle(String id, String userID, String ss, String time, String status) {
+    public DepositModle(String id, String userID, String ss, String time, String status, String amunt, String tid) {
         this.id = id;
         this.userID = userID;
         this.ss = ss;
         this.time = time;
         this.status = status;
+        this.amunt=amunt;
+        this.tid=tid;
+    }
+
+    public String getAmunt() {
+        return amunt;
+    }
+
+    public void setAmunt(String amunt) {
+        this.amunt = amunt;
+    }
+
+    public String getTid() {
+        return tid;
+    }
+
+    public void setTid(String tid) {
+        this.tid = tid;
     }
 
     public String getId() {
