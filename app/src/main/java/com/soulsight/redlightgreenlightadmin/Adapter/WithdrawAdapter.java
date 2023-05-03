@@ -65,6 +65,7 @@ public class WithdrawAdapter extends FirebaseRecyclerAdapter<WithdrawModle, With
                     {
                         double bal= Double.parseDouble(model.getAmount());
                         userModle.setBalance(userModle.getBalance()+bal);
+                        userModle.setTotalWithdraw(userModle.getTotalWithdraw()-bal);
                         model.setStatus("rejected");
                         databaseReference.child(context.getString(R.string.allWithdraw)).child(model.getId()).setValue(null);
                         databaseReference.child(context.getString(R.string.myWithdraw)).child(model.getUserID()).child(model.getId()).setValue(model);

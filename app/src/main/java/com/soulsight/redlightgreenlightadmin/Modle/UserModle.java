@@ -6,14 +6,23 @@ public class UserModle implements Serializable {
     public UserModle() {
     }
     private String id,name,email,pass;
-    private double balance;
+    private double balance,totalWithdraw=0;
 
-    public UserModle(String id, String name, String email, String pass, double balance) {
+    public UserModle(String id, String name, String email, String pass, double balance, double totalWithdraw) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.pass = pass;
         this.balance = balance;
+        this.totalWithdraw=totalWithdraw;
+    }
+
+    public double getTotalWithdraw() {
+        return totalWithdraw;
+    }
+
+    public void setTotalWithdraw(double totalWithdraw) {
+        this.totalWithdraw = totalWithdraw;
     }
 
     public String getId() {
