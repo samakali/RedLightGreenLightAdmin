@@ -22,10 +22,10 @@ public class DepositActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bindingl=ActivityDepositBinding.bind(getCurrentFocus());
+        bindingl=ActivityDepositBinding.inflate(getLayoutInflater());
         setContentView(bindingl.getRoot());
 
-        Query query=databaseReference.child(getString(R.string.myDeposit)).child(FirebaseAuth.getInstance().getUid()).limitToLast(100);
+        Query query=databaseReference.child(getString(R.string.allDeposit)).limitToLast(100);
 
         FirebaseRecyclerOptions<DepositModle> options=new FirebaseRecyclerOptions.Builder<DepositModle>().setQuery(query, DepositModle.class).build();
         adapter=new DepositAdapter(options,this);

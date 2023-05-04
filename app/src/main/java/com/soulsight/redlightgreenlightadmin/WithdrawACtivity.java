@@ -27,7 +27,7 @@ public class WithdrawACtivity extends AppCompatActivity {
         binding=ActivityWithdrawBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Query query=databaseReference.child(getString(R.string.myWithdraw)).child(FirebaseAuth.getInstance().getUid()).limitToLast(100);
+        Query query=databaseReference.child(getString(R.string.allWithdraw)).limitToLast(100);
 
         FirebaseRecyclerOptions<WithdrawModle> options=new FirebaseRecyclerOptions.Builder<WithdrawModle>().setQuery(query,WithdrawModle.class).build();
         adapter=new WithdrawAdapter(options,this);
